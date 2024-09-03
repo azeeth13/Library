@@ -1,0 +1,45 @@
+
+<style>
+  .pagination {
+      display: inline-block;
+  }
+
+  .pagination a {
+      color: black;
+      float: left;
+      padding: 8px 16px;
+      text-decoration: none;
+      transition: background-color .3s;
+  }
+
+  .pagination a.active {
+      background-color: #4CAF50;
+      color: white;
+  }
+
+  .pagination a:hover:not(.active) {
+      background-color: #ddd;
+  }
+</style>
+
+<div class="pagination">
+  {% if page_obj.has_previous %}
+      <a href="?page=1">&laquo;</a>
+      <a href="?page={{ page_obj.previous_page_number }}">Oldingi</a>
+  {% endif %}
+
+  {% for num in page_obj.paginator.page_range %}
+      {% if page_obj.number == num %}
+      {% if page_obj.paginator.num_pages != 1 %}
+          <a class="active">{{ num }}</a>
+          {% endif %}
+      {% elif num > page_obj.number|add:'-5' and num < page_obj.number|add:'5' %}
+          <a href="?page={{ num }}">{{ num }}</a>
+      {% endif %}
+  {% endfor %}
+
+  {% if page_obj.has_next %}
+      <a href="?page={{ page_obj.next_page_number }}">Keyingi</a>
+      <a href="?page={{ page_obj.paginator.num_pages }}">&raquo;</a>
+  {% endif %}
+</div>

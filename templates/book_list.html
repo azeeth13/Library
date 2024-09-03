@@ -1,0 +1,19 @@
+<!-- book_list.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book List</title>
+</head>
+<body>
+    <h1>Books</h1>
+    <ul>
+        {% for book in books %}
+            <li>
+                <strong>{{ book.title }}</strong> Avtor: {{ book.author.name }} 
+                <a href="{{ book.pdf.url }}">Download PDF</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

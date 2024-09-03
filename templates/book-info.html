@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Book INFO {% endblock title %}
+{% block content %}
+
+{% if book != False %}
+{% for x in book %}
+    <section class="ftco-section">
+        <div class="container">
+        <div class="row">
+            <div class="col-md-6 img img-3 d-flex justify-content-center align-items-center"
+            style="background-image: url({{x.rasm.url}});">
+            </div>
+            <div class="col-md-6 wrap-about pl-md-5 ftco-animate py-5">
+            <div class="heading-section">
+                <h2 class="mb-4">{{x.name}}</h2>
+                <p>Muallif: {{x.author}}</p>
+                <p>Kitob haqida: {{x.info}}</p>
+                <a href="{{x.file.url}}" download class="btn btn-primary">Kitobni yuklab olish</a>
+            </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    {% endfor %}
+    {% else %}
+    <section class="ftco-section">
+        <div class="container">
+<h1>404</h1>
+        </div>
+    </section>
+    {% endif %}
+{% endblock content %}

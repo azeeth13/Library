@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}{{name}}{% endblock title %}
+{% block content %}
+<head>
+    <title>Publishing Company - Free Bootstrap 4 Template by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    {% if results != False %}
+    <section class="ftco-section ftco-no-pt">
+        <div class="container-fluid px-md-4">
+            <div class="row">
+                {% for x  in results %}
+                
+                <div class="col-md-6 col-lg-4 d-flex">
+                    <div class="book-wrap d-lg-flex">
+                        <div class="img d-flex justify-content-end"
+                            style="background-image: url({{x.rasm.url}});">
+
+                        </div>
+                        <div class="text p-4">
+                            <p class="mb-2"><span class="price">Kitob
+                                    📚</span></p>
+                            <h2><a
+                                    href="/book/{{x.slug}}/">{{x.name}}</a></h2>
+                            <span class="position">{{i.author}}</span>
+                        </div>
+                    </div>
+                </div>
+
+                {% endfor %}
+
+            </div>
+        </div>
+    </section>
+    {% else %}
+    <section class="ftco-section ftco-no-pt">
+        <div class="container-fluid px-md-4">
+            <div class="row justify-content-center pb-5 mb-3">
+                <div class="col-md-7 heading-section text-center ftco-animate">
+                    <span class="subheading">Books</span>
+                    <h2>Kitob topilmadi</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endif %}
+
+    {% endblock content %}

@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+{% load static %}
+{% block content %}
+<html lang="en">
+
+  <!-- Mirrored from preview.colorlib.com/theme/publishingcompany/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 24 Jun 2024 11:15:57 GMT -->
+  <head>
+    <title>Publishing Company - Free Bootstrap 4 Template by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap"
+      rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet"
+      href="{% static 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  </head>
+  <body>
+    <div class="container-fluid px-md-5  pt-4 pt-md-5">
+      <div class="row justify-content-between">
+        <div class="col-md-8 order-md-last">
+          <div class="row">
+            <div class="col-md-6 text-center">
+              <a class="navbar-brand" href="index-2.html">Nashr Qilish
+                <span>Idorasi</span> <small>Kitob Nashriyoti</small></a>
+            </div>
+            <div class="col-md-6 d-md-flex justify-content-end mb-md-0 mb-3">
+              <form action="#" class="searchform order-lg-last">
+                <div class="form-group d-flex">
+                  <input type="text" class="form-control pl-3"
+                    placeholder="Search">
+                  <button type="submit" placeholder
+                    class="form-control search"><span
+                      class="fa fa-search"></span></button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex">
+          <div class="social-media">
+            <p class="mb-0 d-flex">
+              <a href="https://www.instagram.com/accounts/onetap/?next=%2F"
+                class="d-flex align-items-center justify-content-center"><span
+                  class="fa fa-instagram"><i
+                    class="sr-only">Instagram</i></span></a>>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav
+      class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light"
+      id="ftco-navbar">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+          data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="fa fa-bars"></span> Menu
+        </button>
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav m-auto">
+            <li class="nav-item active"><a href="index-2.html"
+                class="nav-link">Bosh Sahifa</a></li>
+            <li class="nav-item"><a href="about.html"
+                class="nav-link">Biz Haqimizda</a></li>
+            <li class="nav-item"><a href="book.html"
+                class="nav-link">Kitoblar</a></li>
+            <li class="nav-item"><a href="contact.html"
+                class="nav-link">Bog'lanish</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero-wrap"
+      style="background-image: url({% static 'images/bg_1.jpg' %});"
+      data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center">
+          <div class="col-md-8 ftco-animate d-flex align-items-end">
+            <div class="text w-100">
+              <h1 class="mb-4">KITOBLAR YAXSHILIKKA YETAKLAR</h1>
+              <p class="mb-4">Kitobni pdf varianti uchun qo'llanma</p>
+              <p><a href="http://127.0.0.1:8000/book/"
+                  class="btn btn-primary py-3 px-4">Barcha Kitoblar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="ftco-section ftco-no-pt mt-5 mt-md-0">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3 d-flex align-items-stretch ftco-animate">
+              <div class="services-2 text-center">
+                <div class="icon-wrap">
+                  <div
+                    class="icon d-flex align-items-center justify-content-center">
+                    <span class="flaticon-fantasy"></span>
+                  </div>
+                </div>
+                <ul>
+                  {% for category in categories %}
+                    <li><a href="{% url 'category_books' category.slug %}">{{ category.name }}</a></li>
+                  {% endfor %}
+                </ul>
+                <h2><a href="badiiy/">Badiiy Asarlar</a></h2>
+                <p>Kitob —axborotlarni gʻoya, obraz va bilimlarni saqlash hamda
+                  tarqatish, ijtimoiy-siyosiy, ilmiy, estetik qarashlarni
+                  shakllantirish vositasi; bilimlar
+                  targʻiboti va tarbiya quroli; badiiy, ilmiy asar, ijtimoiy
+                  adabiyot.</p>
+              </div>
+            </div>
+            <div class="col-md-3 d-flex align-items-stretch ftco-animate">
+              <div class="services-2 text-center">
+                <div class="icon-wrap">
+                  <div
+                    class="icon d-flex align-items-center justify-content-center">
+                    <span class="flaticon-heart"></span>
+                  </div>
+                </div>
+                <h2><a href="drama/">Drama</a></h2>
+                <p>Drama kitoblari inson hissiyotlari, ijtimoiy munosabatlar va
+                  inson ruhiyati bilan bog'liq voqealarni tasvirlaydi. Bu
+                  turdagi asarlar ko'pincha kuchli hissiy holatlar,
+                  qarama-qarshiliklar va kutilmagan burilishlar bilan ajralib
+                  turadi.</p>
+              </div>
+            </div>
+            <div class="col-md-3 d-flex align-items-stretch ftco-animate">
+              <div class="services-2 text-center">
+                <div class="icon-wrap">
+                  <div
+                    class="icon d-flex align-items-center justify-content-center">
+                    <span class="flaticon-model"></span>
+                  </div>
+                </div>
+                <h2><a href="horror/">Horror Kitoblar</a></h2>
+                <p>Bu kitoblarda odatda g'ayritabiiy hodisalar, jinlar,
+                  arvohlar, qotillar va boshqa qo'rqinchli elementlar ishtirok
+                  etadi.</p>
+              </div>
+            </div>
+            <div class="col-md-3 d-flex align-items-stretch ftco-animate">
+              <div class="services-2 text-center">
+                <div class="icon-wrap">
+                  <div
+                    class="icon d-flex align-items-center justify-content-center">
+                    <span class="flaticon-history"></span>
+                  </div>
+                </div>
+                <h2><a href="jahon/">Jahon Adabiyoti</a></h2>
+                <p>
+                  Jahon adabiyoti dunyoning turli burchaklaridan kelgan va
+                  asrlar davomida insoniyat madaniy merosini boyitgan ko'plab
+                  muhim asarlarni o'z ichiga oladi.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="ftco-counter ftco-section ftco-no-pt ftco-no-pb img bg-light"
+        id="section-counter">
+        <div class="container">
+          <div class="row">
+            <div
+              class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+              <div class="block-18 py-4 mb-4">
+                <div class="text align-items-center">
+                  <strong class="number" data-number="150">0</strong>
+                  <span>Faol Foydalanuvchilar</span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+              <div class="block-18 py-4 mb-4">
+                <div class="text align-items-center">
+                  <strong class="number" data-number="500">0</strong>
+                  <span>Umumiy betlar soni</span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+              <div class="block-18 py-4 mb-4">
+                <div class="text align-items-center">
+                  <strong class="number" data-number="150">0</strong>
+                  <span>Sarflanadigan Vaqt</span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+              <div class="block-18 py-4 mb-4">
+                <div class="text align-items-center">
+                  <strong class="number" data-number="34">0</strong>
+                  <span>INSTAGRAM KUZATUVCHILARI</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="ftco-section">
+        <div class="container">
+          <div class="row">
+            <div
+              class="col-md-6 img img-3 d-flex justify-content-center align-items-center"
+              style="background-image: url({% static 'images/about-1.jpg' %});">
+            </div>
+            <div class="col-md-6 wrap-about pl-md-5 ftco-animate py-5">
+              <div class="heading-section">
+                <span class="subheading">Nashr Qilish Sahifasiga Xush
+                  Kelibsiz</span>
+                <h2 class="mb-4">Mualliflar tomonidan yaratilgan nashriyot
+                  kompaniyasi</h2>
+                <p>A small river named Duden flows by their place and supplies
+                  it with the necessary regelialia. It is a paradisematic
+                  country, in which roasted parts of sentences fly into your
+                  mouth.</p>
+                <p>Mualliflar Uchun Joy</p>
+                <a href="allauthor" class="btn btn-primary">View All Our
+                  Authors</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="ftco-section ftco-no-pt">
+        <div class="container-fluid px-md-4">
+          <div class="row justify-content-center pb-5 mb-3">
+            <div class="col-md-7 heading-section text-center ftco-animate">
+              <span class="subheading">Books</span>
+              <h2>Yangi Kitoblar</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-lg-4 d-flex">
+              <div class="book-wrap d-lg-flex">
+                <div class="img d-flex justify-content-end"
+                  style="background-image: url({% static 'photo/eshik_orasi.jpg' %});">
+                  
+                </div>
+                <div class="text p-4">
+                  <p class="mb-2"><span class="price">Kitob 📚</span></p>
+                  <h2><a href="http://127.0.0.1:8000/book/ikki-eshik-orasi/">Ikki eshik orasi</a></h2>
+                  <span class="position">O'tkir Hoshimov</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 d-flex">
+              <div class="book-wrap d-lg-flex">
+                <div class="img d-flex justify-content-end"
+                  style="background-image: url({% static 'photo/cat.jpg' %});">
+                  
+                </div>
+                <div class="text p-4">
+                  <p class="mb-2"><span class="price sale">Kitob 📚</span>
+                      
+                  <h2><a href="http://127.0.0.1:8000/book/mushuklar-saltanati/">Mushuklar Saltanati</a></h2>
+                  <span class="position">Lao She</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 d-flex">
+              <div class="book-wrap d-lg-flex">
+                <div class="img d-flex justify-content-end"
+                  style="background-image: url({% static 'photo/ota.jpg' %});">
+                  
+                </div>
+                <div class="text p-4">
+                  <p class="mb-2"><span class="price">Kitob 📚</span></p>
+                  <h2><a href="http://127.0.0.1:8000/book/gorio-ota/">Gorio Ota</a></h2>
+                  <span class="position">Onore de Balzak</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4 d-flex">
+              <div class="book-wrap d-lg-flex">
+                <div class="img d-flex justify-content-end"
+                  style="background-image: url({% static 'photo/otkan_kunlar.jpg' %});">
+                  
+                </div>
+                <div class="text p-4 order-md-first">
+                  <p class="mb-2"><span class="price">Kitob 📚</span></p>
+                  <h2><a href="http://127.0.0.1:8000/book/zamonamiz-qahramoni/">Zamonamiz Qahramoni</a></h2>
+                  <span class="position">Mixail Lermontov</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 d-flex">
+              <div class="book-wrap d-lg-flex">
+                <div class="img d-flex justify-content-end"
+                  style="background-image: url({% static 'photo/kimyogar.jpg' %});">
+                  
+                </div>
+                <div class="text p-4 order-md-first">
+                  <p class="mb-2"><span class="price">Kitob 📚</span></p>
+                  <h2><a href="http://127.0.0.1:8000/book/al-kimyogar/">Al Kimyogar</a></h2>
+                  <span class="position">Paulo Koelo</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="ftco-section testimony-section ftco-no-pb">
+        <div class="img img-bg border"
+          style="background-image: url({% static 'images/bg_4.jpg' %});"></div>
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row justify-content-center mb-5">
+            <div
+              class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+              <span class="subheading">Comments</span>
+              <h2 class="mb-3">Foydalanuvchilar tomonidan yozilgan izohlar</h2>
+            </div>
+          </div>
+          <div class="row ftco-animate">
+            <div class="col-md-12">
+              <div class="carousel-testimony owl-carousel ftco-owl">
+                <div class="item">
+                  <div class="testimony-wrap py-4">
+                    <div
+                      class="icon d-flex align-items-center justify-content-center"><span
+                        class="fa fa-quote-left"></div>
+                      <div class="text">
+                        <p class="mb-4">Kitoblar o'qish uchun juda ajoyib .Bu
+                          sayt orqali men o'qimoqchi bo'lgan kitoblarimni
+                          o'zbekcha variantini topdim.</p>
+                        <div class="d-flex align-items-center">
+                          {% comment %} <div class="user-img"
+                            style="background-image: url({% static 'images/person_1.jpg' %})"></div>
+                          {% endcomment %}
+                          <div class="pl-3">
+                            <p class="name">Odilbekov Javohir</p>
+                            <span class="position"></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="testimony-wrap py-4">
+                      <div
+                        class="icon d-flex align-items-center justify-content-center"><span
+                          class="fa fa-quote-left"></div>
+                        <div class="text">
+                          <p class="mb-4">Kitobni barchaga taklif qilaman .Menga
+                            ayniqsa o'zbekchada ekanligi yoqdi</p>
+                          <div class="d-flex align-items-center">
+                            {% comment %} <div class="user-img"
+                              style="background-image: url({% static 'images/person_2.jpg' %})"></div>
+                            {% endcomment %}
+                            <div class="pl-3">
+                              <p class="name">Egamov Azizbek</p>
+                              <span class="position"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="testimony-wrap py-4">
+                        <div
+                          class="icon d-flex align-items-center justify-content-center"><span
+                            class="fa fa-quote-left"></div>
+                          <div class="text">
+                            <p class="mb-4">Bu sayt meni o'quvchim tomonidan
+                              yaratilgan va men bundan hursandman</p>
+                            <div class="d-flex align-items-center">
+                              {% comment %} <div class="user-img"
+                                style="background-image: url({% static 'images/person_3.jpg' %})"></div>
+                              {% endcomment %}
+                              <div class="pl-3">
+                                <p class="name">Rajabov Shohruhbek</p>
+                                <span class="position"></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <div class="testimony-wrap py-4">
+                          <div
+                            class="icon d-flex align-items-center justify-content-center"><span
+                              class="fa fa-quote-left"></div>
+                            <div class="text">
+                              <p class="mb-4">Kitoblar yetarlicha emas</p>
+                              <div class="d-flex align-items-center">
+                                {% comment %} <div class="user-img"
+                                  style="background-image: url({% static 'images/person_1.jpg' %})"></div>
+                                {% endcomment %}
+                                <div class="pl-3">
+                                  <p class="name">Salayev Ruslan</p>
+                                  <span class="position"></span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="item">
+                          <div class="testimony-wrap py-4">
+                            <div
+                              class="icon d-flex align-items-center justify-content-center"><span
+                                class="fa fa-quote-left"></div>
+                              <div class="text">
+                                <p class="mb-4">Menga Yoqmadi juda zerikarli</p>
+                                <div class="d-flex align-items-center">
+                                  {% comment %} <div class="user-img"
+                                    style="background-image: url({% static 'images/person_2.jpg' %})"></div>
+                                  {% endcomment %}
+                                  <div class="pl-3">
+                                    <p class="name">Xudoyberganov Mirzohid</p>
+                                    <span class="position">Best site i've ever
+                                      seen</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="ftco-section">
+                  <div class="container">
+                    <div class="row justify-content-center mb-5">
+                      <div
+                        class="col-md-7 heading-section text-center ftco-animate">
+                      </div>
+                    </div>
+                    <div class="row d-flex">
+                      <div class="col-md-4 d-flex ftco-animate">
+                        <div class="blog-entry justify-content-end">
+                          <div class="text text-center">
+                            <a class="block-20 img"
+                              style="background-image: url({% static 'images/image_1.jpg' %});">
+                            </a>
+                            <div
+                              class="meta text-center mb-2 d-flex align-items-center justify-content-center">
+                              <div>
+                                <span class="day">1</span>
+
+                              </div>
+                            </div>
+                            <h3 class="heading mb-3"><a>O'zbekistondaki Katta
+                                Kutubxona</a></h3>
+
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4 d-flex ftco-animate">
+                        <div class="blog-entry justify-content-end">
+                          <div class="text text-center">
+                            <a class="block-20 img"
+                              style="background-image: url({% static 'images/image_2.jpg' %});">
+                            </a>
+                            <div
+                              class="meta text-center mb-2 d-flex align-items-center justify-content-center">
+                              <div>
+                                <span class="day">2</span>
+                              </div>
+                            </div>
+                            <h3 class="heading mb-3"><a>Ko'p Qamrovli</a></h3>
+
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4 d-flex ftco-animate">
+                        <div class="blog-entry justify-content-end">
+                          <div class="text text-center">
+                            <a class="block-20 img"
+                              style="background-image: url({% static 'images/image_3.jpg' %});">
+                            </a>
+                            <div
+                              class="meta text-center mb-2 d-flex align-items-center justify-content-center">
+                              <div>
+                                <span class="day">3</span>
+
+                              </div>
+                            </div>
+                            <h3 class="heading mb-3"><a>Do'stlar Bilan
+                                Ishlash</a></h3>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <footer class="ftco-footer">
+                  <div class="container">
+                    <div class="row mb-5">
+                      <div class="col-sm-12 col-md">
+                        <div class="ftco-footer-widget mb-4">
+                          <h2 class="ftco-heading-2 logo"><a
+                              href="https://t.me/XAVIERXCK">Bog'lanish</a></h2>
+                          <p>Biz bilan bog'lanish uchun quyidagi ilovaga
+                            o'ting</p>
+                          <ul class="ftco-footer-social list-unstyled mt-2">
+                            <li class="ftco-animate"><a
+                                href="https://www.instagram.com/accounts/onetap/?next=%2F"><span
+                                  class="fa fa-instagram"></span></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md">
+                        <div class="ftco-footer-widget mb-4 ml-md-4">
+                          <h2 class="ftco-heading-2">Extra Links</h2>
+                          <ul class="list-unstyled">
+                            <li><a href="#"><span
+                                  class="fa fa-chevron-right mr-2"></span>Affiliate
+                                Program</a></li>
+                            <li><a href="#"><span
+                                  class="fa fa-chevron-right mr-2"></span>Business
+                                Services</a></li>
+                            <li><a href="#"><span
+                                  class="fa fa-chevron-right mr-2"></span>Education
+                                Services</a></li>
+                            <li><a href="#"><span
+                                  class="fa fa-chevron-right mr-2"></span>Gift
+                                Cards</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md">
+                        <div class="ftco-footer-widget mb-4 ml-md-4">
+                          <h2 class="ftco-heading-2">Legal</h2>
+                          <ul class="list-unstyled">
+                            <li><a href="#"><span
+                                  class="fa fa-chevron-right mr-2"></span>Join
+                                us</a></li>
+                            <li><a href="#"><span
+                                  class="fa fa-chevron-right mr-2"></span>Blog</a></li>
+                            <li><a href="#"><span
+                                  class="fa fa-chevron-right mr-2"></span>Privacy
+                                &amp; Policy</a></li>
+                            <li><a href="#"><span
+                                  class="fa fa-chevron-right mr-2"></span>Term
+                                &amp; Conditions</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md">
+                        <div class="ftco-footer-widget mb-4">
+                          <h2 class="ftco-heading-2">Ma'lumot</h2>
+                          <ul class="list-unstyled">
+                            <li><a href="http://127.0.0.1:8000/about/"><span
+                                  class="fa fa-chevron-right mr-2"></span>About
+                                Us</a></li>
+                            <li><a href="http://127.0.0.1:8000/contact/"><span
+                                  class="fa fa-chevron-right mr-2"></span>Contact</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md">
+                        <div class="ftco-footer-widget mb-4">
+                          <h2 class="ftco-heading-2">Have a Questions?</h2>
+                          <div class="block-23 mb-3">
+                            <ul>
+                              <li><span
+                                  class="icon fa fa-map marker"></span><span
+                                  class="text">Xorazm Viloyati Yangiariq
+                                  Tumani</span></li>
+                              <li><a><span class="icon fa fa-phone"></span><span
+                                    class="text">+998881204414</span></a></li>
+                              <li><a href="https://t.me/XAVIERXCK"><span
+                                    class="icon fa fa-paper-plane pr-4"></span><span
+                                    class="text"><span class="__cf_email__"
+                                      data-cfemail="325b5c545d724b5d4740565d5f535b5c1c515d5f">Telegram
+                                      manzil</span></span></a></li>
+                            </ul>email
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="container-fluid px-0 py-5 bg-black">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-12">
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </footer>
+
+                <div id="ftco-loader" class="show fullscreen"><svg
+                    class="circular" width="48px" height="48px"><circle
+                      class="path-bg" cx="24" cy="24" r="22" fill="none"
+                      stroke-width="4" stroke="#eeeeee" /><circle class="path"
+                      cx="24" cy="24" r="22" fill="none" stroke-width="4"
+                      stroke-miterlimit="10" stroke="#F96D00" /></svg></div>
+                <script src="js/jquery.min.js"></script>
+                <script src="js/jquery-migrate-3.0.1.min.js"></script>
+                <script src="js/popper.min.js"></script>
+                <script src="js/bootstrap.min.js"></script>
+                <script src="js/jquery.easing.1.3.js"></script>
+                <script src="js/jquery.waypoints.min.js"></script>
+                <script src="js/jquery.stellar.min.js"></script>
+                <script src="js/owl.carousel.min.js"></script>
+                <script src="js/jquery.magnific-popup.min.js"></script>
+                <script src="js/jquery.animateNumber.min.js"></script>
+                <script src="js/scrollax.min.js"></script>
+                <script
+                  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&amp;sensor=false"></script>
+                <script src="js/google-map.js"></script>
+                <script src="js/main.js"></script>
+
+                <script async
+                  src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+                <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+                <script defer
+                  src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"
+                  integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
+                  data-cf-beacon='{"rayId":"898c4ce3d91b168d","b":1,"version":"2024.4.1","token":"cd0b4b3a733644fc843ef0b185f98241"}'
+                  crossorigin="anonymous"></script>
+              </body>
+
+              <!-- Mirrored from preview.colorlib.com/theme/publishingcompany/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 24 Jun 2024 11:15:57 GMT -->
+            </html>
+            {% endblock %}

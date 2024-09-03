@@ -1,0 +1,342 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}{{name}}{% endblock title %}
+{% block content %}
+<head>
+
+
+<title>Publishing Company - Free Bootstrap 4 Template by Colorlib</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="{% static 'css/animate.css' %}">
+<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+<link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+
+  <section class="hero-wrap" style="background-image: url({% static 'images/bg_1.jpg' %});" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row no-gutters slider-text align-items-center">
+        <div class="col-md-8 ftco-animate d-flex align-items-end">
+          <div class="text w-100">
+            <h1 class="mb-4">Kitoblar Ilm Kaliti </h1>
+            <p class="mb-4">Kitobni pdf varianti uchun qo'llanma</p>
+            <p><a href="http://127.0.0.1:8000/book/" class="btn btn-primary py-3 px-4">Barcha Kitoblar</a> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="ftco-section ftco-no-pt mt-5 mt-md-0">
+    <div class="container">
+      <div class="row">
+        {% for category in categories %}
+        <div class="col-md-3 d-flex align-items-stretch ftco-animate">
+          <div class="services-2 text-center">
+            <div class="icon-wrap">
+              <div class="icon d-flex align-items-center justify-content-center">
+                <span class="flaticon-fantasy"></span>
+              </div>
+            </div>
+            <h2><a href="/category/{{category.slug}}">{{category.name}}</a></h2>
+            <p>{{category.info}}</p>
+          </div>
+        </div>
+        {% endfor %}
+     </div>
+    </div>
+  </section>
+  <section class="ftco-counter ftco-section ftco-no-pt ftco-no-pb img bg-light" id="section-counter">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+          <div class="block-18 py-4 mb-4">
+            <div class="text align-items-center">
+              <strong class="number" data-number="150">0</strong>
+              <span>Faol Foydalanuvchilar</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+          <div class="block-18 py-4 mb-4">
+            <div class="text align-items-center">
+              <strong class="number" data-number="3040">0</strong>
+              <span>Umumiy betlar soni</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+          <div class="block-18 py-4 mb-4">
+            <div class="text align-items-center">
+              <strong class="number" data-number="150">0</strong>
+              <span>Sarflanadigan Vaqt</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+          <div class="block-18 py-4 mb-4">
+            <div class="text align-items-center">
+              <strong class="number" data-number="34">0</strong>
+              <span>INSTAGRAM KUZATUVCHILARI</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="ftco-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 img img-3 d-flex justify-content-center align-items-center"
+          style="background-image: url({% static 'images/about-1.jpg' %});">
+        </div>
+        <div class="col-md-6 wrap-about pl-md-5 ftco-animate py-5">
+          <div class="heading-section">
+            <span class="subheading">Nashr Qilish Sahifasiga Xush Kelibsiz</span>
+            <h2 class="mb-4">Mualliflar tomonidan yaratilgan nashriyot kompaniyasi</h2>
+            <p></p>
+            <p>Mualliflar Uchun Joy</p>
+            <a href="http://127.0.0.1:8000/about/" class="btn btn-primary">Muallifni Ko'rish</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="ftco-section ftco-no-pt">
+    <div class="container-fluid px-md-4">
+      <div class="row justify-content-center pb-5 mb-3">
+        <div class="col-md-7 heading-section text-center ftco-animate">
+          <span class="subheading">Books</span>
+          <h2>Yangi Kitoblar</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-lg-4 d-flex">
+          <div class="book-wrap d-lg-flex">
+            <div class="img d-flex justify-content-end" style="background-image: url({% static 'photo/eshik_orasi.jpg' %});">
+              
+            </div>
+            <div class="text p-4">
+              <p class="mb-2"><span class="price">Kitob 📚</span></p>
+              <h2><a href="http://127.0.0.1:8000/book/ikki-eshik-orasi/">Ikki eshik orasi</a></h2>
+              <span class="position">O'tkir Hoshimov</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 d-flex">
+          <div class="book-wrap d-lg-flex">
+            <div class="img d-flex justify-content-end" style="background-image: url({% static 'photo/cat.jpg' %});">
+              
+            </div>
+            <div class="text p-4">
+              <p class="mb-2"><span class="price sale">Kitob 📚</span>
+              <h2><a href="http://127.0.0.1:8000/book/mushuklar-saltanati/">Mushuklar Saltanati</a></h2>
+              <span class="position">Lao She</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 d-flex">
+          <div class="book-wrap d-lg-flex">
+            <div class="img d-flex justify-content-end" style="background-image: url({% static 'photo/ota.jpg' %});">
+              
+            </div>
+            <div class="text p-4">
+              <p class="mb-2"><span class="price">Kitob 📚</span></p>
+              <h2><a href="http://127.0.0.1:8000/book/gorio-ota/">Gorio Ota</a></h2>
+              <span class="position">Onore de Balzak</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-4 d-flex">
+          <div class="book-wrap d-lg-flex">
+            <div class="img d-flex justify-content-end" style="background-image: url({% static 'photo/zamon.jpg' %});">
+              
+            </div>
+            <div class="text p-4 order-md-first">
+              <p class="mb-2"><span class="price">Kitob 📚</span></p>
+              <h2><a href="http://127.0.0.1:8000/book/zamonamiz-qahramoni/">Zamonamiz Qahramoni</a></h2>
+              <span class="position">Mixail Lermontov</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 d-flex">
+          <div class="book-wrap d-lg-flex">
+            <div class="img d-flex justify-content-end" style="background-image: url({% static 'photo/kimyogar.jpg' %});">
+              
+            </div>
+            <div class="text p-4 order-md-first">
+              <p class="mb-2"><span class="price">Kitob 📚</span></p>
+              <h2><a href="http://127.0.0.1:8000/book/al-kimyogar/">AL Kimyogar</a></h2>
+              <span class="position">Paulo Koelo</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="ftco-section testimony-section ftco-no-pb">
+    <div class="img img-bg border" style="background-image: url({% static 'images/bg_4.jpg' %});"></div>
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row justify-content-center mb-5">
+        <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+          <span class="subheading">Comments</span>
+          <h2 class="mb-3">Foydalanuvchilar tomonidan yozilgan izohlar</h2>
+        </div>
+      </div>
+      <div class="row ftco-animate">
+        <div class="col-md-12">
+          <div class="carousel-testimony owl-carousel ftco-owl">
+            <div class="item">
+              <div class="testimony-wrap py-4">
+                <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></div>
+                <div class="text">
+                  <p class="mb-4"></p>
+                  <div class="d-flex align-items-center">
+                    {% comment %} <div class="user-img" style="background-image: url({% static 'images/person_1.jpg' %})"></div> {% endcomment %}
+                    <div class="pl-3">
+                      <p class="name">Xudoyberganov Mirzohid</p>
+                      <span class="position">Best site i've ever seen</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="testimony-wrap py-4">
+                <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></div>
+                <div class="text">
+                  <p class="mb-4">Kitoblar o'qish uchun juda ajoyib .Bu sayt orqali men o'qimoqchi bo'lgan kitoblarimni o'zbekcha variantini topdim.</p>
+                  <div class="d-flex align-items-center">
+                    {% comment %} <div class="user-img" style="background-image: url({% static 'images/person_2.jpg' %})"></div> {% endcomment %}
+                    <div class="pl-3">
+                      <p class="name">Odilbekov Javohir</p>
+                      <span class="position"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="testimony-wrap py-4">
+                <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></div>
+                <div class="text">
+                  <p class="mb-4">Kitobni barchaga taklif qilaman .Menga ayniqsa o'zbekchada ekanligi yoqdi</p>
+                  <div class="d-flex align-items-center">
+                    {% comment %} <div class="user-img" style="background-image: url({% static 'images/person_3.jpg' %})"></div> {% endcomment %}
+                    <div class="pl-3">
+                      <p class="name">Egamov Azizbek</p>
+                      <span class="position"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="testimony-wrap py-4">
+                <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></div>
+                <div class="text">
+                  <p class="mb-4">Bu sayt meni o'quvchim tomonidan yaratilgan va men bundan hursandman</p>
+                  <div class="d-flex align-items-center">
+                    {% comment %} <div class="user-img" style="background-image: url({% static 'images/person_1.jpg' %})"></div> {% endcomment %}
+                    <div class="pl-3">
+                      <p class="name">Rajabov Shohruhbek</p>
+                      <span class="position"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="testimony-wrap py-4">
+                <div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-quote-left"></div>
+                <div class="text">
+                  <p class="mb-4">Kitoblar yetarlicha emas</p>
+                  <div class="d-flex align-items-center">
+                    {% comment %} <div class="user-img" style="background-image: url({% static 'images/person_2.jpg' %})"></div> {% endcomment %}
+                    <div class="pl-3">
+                      <p class="name">Salayev Ruslan</p>
+                      <span class="position"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="ftco-section">
+    <div class="container">
+      <div class="row justify-content-center mb-5">
+        <div class="col-md-7 heading-section text-center ftco-animate">
+        </div>
+      </div>
+      <div class="row d-flex">
+        <div class="col-md-4 d-flex ftco-animate">
+          <div class="blog-entry justify-content-end">
+            <div class="text text-center">
+              <a class="block-20 img" style="background-image: url({% static 'images/image_1.jpg' %});">
+              </a>
+              <div class="meta text-center mb-2 d-flex align-items-center justify-content-center">
+                <div>
+                  <span class="day">1</span>
+
+                </div>
+              </div>
+              <h3 class="heading mb-3"><a>O'zbekistondaki Katta Kutubxona</a></h3>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex ftco-animate">
+          <div class="blog-entry justify-content-end">
+            <div class="text text-center">
+              <a class="block-20 img" style="background-image: url({% static 'images/image_2.jpg' %});">
+              </a>
+              <div class="meta text-center mb-2 d-flex align-items-center justify-content-center">
+                <div>
+                  <span class="day">2</span>
+                </div>
+              </div>
+              <h3 class="heading mb-3"><a>Ko'p Qamrovli</a></h3>
+              <p></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex ftco-animate">
+          <div class="blog-entry justify-content-end">
+            <div class="text text-center">
+              <a class="block-20 img" style="background-image: url({% static 'images/image_3.jpg' %});">
+              </a>
+              <div class="meta text-center mb-2 d-flex align-items-center justify-content-center">
+                <div>
+                  <span class="day">3</span>
+
+                </div>
+              </div>
+              <h3 class="heading mb-3"><a>Do'stlar Bilan Ishlash</a></h3>
+ 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% endblock content %}
+
+
